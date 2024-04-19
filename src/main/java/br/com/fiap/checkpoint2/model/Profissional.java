@@ -8,11 +8,9 @@ import java.math.BigInteger;
 import java.time.LocalDateTime;
 
 
-
 @Entity
 @Table(name = "proficionais")
-public class Profissonal extends AbstractEntity<Long> {
-
+public class Profissional extends AbstractEntity<Long> {
 
 
     @Column(nullable = false, length = 40, unique = true)
@@ -21,7 +19,7 @@ public class Profissonal extends AbstractEntity<Long> {
     @Column(nullable = false, length = 40, unique = true)
     private String especialidade;
 
-    @Column( length = 40 )
+    @Column(length = 40)
     private BigInteger valor_hora;
 
     @Column(nullable = false, length = 40, unique = true)
@@ -70,7 +68,6 @@ public class Profissonal extends AbstractEntity<Long> {
     public void setUpdated_at(LocalDateTime updated_at) {
         this.updated_at = updated_at;
     }
-
 
 
 }

@@ -1,36 +1,31 @@
 package br.com.fiap.checkpoint2.model;
 
 
-package br.com.fiap.checkpoint2.model;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Table;
 
-        import jakarta.persistence.Column;
-        import jakarta.persistence.Entity;
-        import jakarta.persistence.Table;
-
-        import java.time.LocalDate;
-        import java.time.LocalDateTime;
-        import java.util.Date;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.util.Date;
 
 
 @Entity
-@Table (name = "pacientes")
-public class Paciente extends AbstractEntity<Long>{
-
-
-
+@Table(name = "pacientes")
+public class Paciente extends AbstractEntity<Long> {
     @Column(nullable = false, length = 40, unique = true)
     private String nome;
 
-    @Column(  length = 40)
+    @Column(length = 40)
     private String endereco;
 
-    @Column( length = 40)
+    @Column(length = 40)
     private String bairro;
 
-    @Column( length = 40)
+    @Column(length = 40)
     private String email;
 
-    @Column(length = 40 )
+    @Column(length = 40)
     private String telefone_completo;
 
     @Column(nullable = false, length = 40, unique = true)
